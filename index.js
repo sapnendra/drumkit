@@ -63,9 +63,13 @@ function makeSound(key) {
 }
 
 function buttonAnimation(currentKey) {
-    let activeButton = document.querySelector(".w");
-}
+    let activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
 
+    setTimeout(function() {
+        activeButton.classList.remove("pressed");
+    }, 100)
+}
 // document.addEventListener("keydown", function(event) {
 //     console.log(event);
 // })
